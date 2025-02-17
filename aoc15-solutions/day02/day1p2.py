@@ -1,5 +1,8 @@
 import sys
 
+def multiply(a, b):
+    return 2 * a * b
+
 def main() -> None:
     data: list[str] = sys.stdin.readlines()
     
@@ -7,7 +10,7 @@ def main() -> None:
     for line in data:
         dimensions = line.rstrip().split('x')
         l, w, h = map(int, dimensions)
-        total += (2 * l * w) + (2 * w * h) + (2 * h * l) + min(l * w, w * h, h * l)
+        total += multiply(l, w) + multiply(w, h) + multiply(h, l) + min(l * w, w * h, h * l)
     print(total)
 
 if __name__ == "__main__":
