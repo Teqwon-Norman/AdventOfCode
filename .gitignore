@@ -107,3 +107,5 @@ cython_debug/
 .DS_Store
 
 .idea
+
+*.jar
